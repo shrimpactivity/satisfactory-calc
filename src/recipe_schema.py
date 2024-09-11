@@ -1,7 +1,7 @@
 schema = {
     "type": "object",
     "properties": {
-        "name": {"type": "string"},
+        "recipe_name": {"type": "string"},
         "primary": {"type": "boolean"},
         "ingredients": {
             "type": "array",
@@ -13,7 +13,7 @@ schema = {
         },
         "duration": {"type": "integer", "minimum": 0.001}
     },
-    "required": ["name", "primary", "ingredients", "products", "duration"],
+    "required": ["recipe_name", "primary", "ingredients", "products", "duration"],
     
     "$defs": {
         "item_amount": {

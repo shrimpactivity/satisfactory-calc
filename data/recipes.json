@@ -1,6 +1,6 @@
 [
     {
-        "name": "iron_ingot",
+        "recipe_name": "iron_ingot",
         "primary": true,
         "ingredients": [
             {
@@ -17,7 +17,7 @@
         "duration": 2
     },
     {
-        "name": "smart_plating",
+        "recipe_name": "smart_plating",
         "primary": true,
         "ingredients": [
             {
@@ -38,7 +38,7 @@
         "duration": 30
     },
     {
-        "name": "reinforced_iron_plate",
+        "recipe_name": "reinforced_iron_plate",
         "primary": true,
         "ingredients": [
             {
@@ -59,7 +59,7 @@
         "duration": 12
     },
     {
-        "name": "iron_plate",
+        "recipe_name": "iron_plate",
         "primary": true,
         "ingredients": [
             {
@@ -76,7 +76,7 @@
         "duration": 12
     },
     {
-        "name": "screw",
+        "recipe_name": "screw",
         "primary": true,
         "ingredients": [
             {
@@ -93,7 +93,7 @@
         "duration": 6
     },
     {
-        "name": "iron_rod",
+        "recipe_name": "iron_rod",
         "primary": true,
         "ingredients": [
             {
@@ -110,7 +110,7 @@
         "duration": 4
     },
     {
-        "name": "iron_rod",
+        "recipe_name": "iron_rod",
         "primary": true,
         "ingredients": [
             {
@@ -127,7 +127,7 @@
         "duration": 4
     },
     {
-        "name": "rotor",
+        "recipe_name": "rotor",
         "primary": true,
         "ingredients": [
             {
@@ -141,7 +141,7 @@
         ],
         "products": [
             {
-                "item": "iron_rod",
+                "item": "rotor",
                 "amount": 1
             }
         ],
