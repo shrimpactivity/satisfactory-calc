@@ -1,0 +1,150 @@
+[
+    {
+        "name": "iron_ingot",
+        "primary": true,
+        "ingredients": [
+            {
+                "item": "iron_ore",
+                "amount": 1
+            }
+        ],
+        "products": [
+            {
+                "item": "iron_ingot",
+                "amount": 1
+            }
+        ],
+        "duration": 2
+    },
+    {
+        "name": "smart_plating",
+        "primary": true,
+        "ingredients": [
+            {
+                "item": "reinforced_iron_plate",
+                "amount": 1
+            },
+            {
+                "item": "rotor",
+                "amount": 1
+            }
+        ],
+        "products": [
+            {
+                "item": "smart_plating",
+                "amount": 1
+            }
+        ],
+        "duration": 30
+    },
+    {
+        "name": "reinforced_iron_plate",
+        "primary": true,
+        "ingredients": [
+            {
+                "item": "iron_plate",
+                "amount": 6
+            },
+            {
+                "item": "screw",
+                "amount": 12
+            }
+        ],
+        "products": [
+            {
+                "item": "reinforced_iron_plate",
+                "amount": 1
+            }
+        ],
+        "duration": 12
+    },
+    {
+        "name": "iron_plate",
+        "primary": true,
+        "ingredients": [
+            {
+                "item": "iron_ingot",
+                "amount": 3
+            }
+        ],
+        "products": [
+            {
+                "item": "iron_plate",
+                "amount": 1
+            }
+        ],
+        "duration": 12
+    },
+    {
+        "name": "screw",
+        "primary": true,
+        "ingredients": [
+            {
+                "item": "iron_rod",
+                "amount": 1
+            }
+        ],
+        "products": [
+            {
+                "item": "screw",
+                "amount": 4
+            }
+        ],
+        "duration": 6
+    },
+    {
+        "name": "iron_rod",
+        "primary": true,
+        "ingredients": [
+            {
+                "item": "iron_ingot",
+                "amount": 1
+            }
+        ],
+        "products": [
+            {
+                "item": "iron_rod",
+                "amount": 1
+            }
+        ],
+        "duration": 4
+    },
+    {
+        "name": "iron_rod",
+        "primary": true,
+        "ingredients": [
+            {
+                "item": "iron_ingot",
+                "amount": 1
+            }
+        ],
+        "products": [
+            {
+                "item": "iron_rod",
+                "amount": 1
+            }
+        ],
+        "duration": 4
+    },
+    {
+        "name": "rotor",
+        "primary": true,
+        "ingredients": [
+            {
+                "item": "iron_rod",
+                "amount": 5
+            },
+            {
+                "item": "screw",
+                "amount": 25
+            }
+        ],
+        "products": [
+            {
+                "item": "iron_rod",
+                "amount": 1
+            }
+        ],
+        "duration": 15
+    }
+]
