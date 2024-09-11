@@ -46,3 +46,10 @@ def buildFactory(item, rate, item_recipes, raw_materials):
         "byproducts": byproduct_totals,
         "raw_materials": raw_material_totals
     }
+
+def prettyPrintTree(tree, tabSize=2):
+    def prettyPrintTreeHelper(tree, tabs):
+        if (len(tree) == 0):
+            return
+        whitespace = "  "
+        print("")
