@@ -3,7 +3,7 @@ def getRate(amount, duration, rounding=1):
     return round(60 / duration, rounding) * amount
 
 # Generates a tree encoded as list [item, rate, [children]]
-def buildFactory(item, rate, item_recipes):
+def buildFactory(items, rates, item_recipes):
     ingredient_totals = {}
     byproduct_totals = {}
 
@@ -43,15 +43,18 @@ def buildFactory(item, rate, item_recipes):
             children.append(buildFactoryHelper(ingredient_item, consumption_rate))
         return [item, rate, children]
     
+    trees = [buildFactoryHelper(items[i], rates[i]) for i in range(len(items))]
+
     return {
-        "tree": buildFactoryHelper(item, rate),
+        "trees": trees,
         "ingredient_totals": ingredient_totals,
         "byproducts": byproduct_totals,
     }
 
 RAW_MATERIALS = ["iron_ore", "copper_ore", "limestone", "coal"]
 
-def prettyPrintFactory(factory, tabSize=2):
+def prettyPrintFactory(factory, tabSize=4):
+
     def prettyPrintTreeHelper(tree, tabs=0):
         if (len(tree) == 0):
             return
@@ -60,37 +63,28 @@ def prettyPrintFactory(factory, tabSize=2):
         rate = tree[1]
         children = tree[2]
 
-        whitespace = " " * tabs * tabSize
-        corner = "" if tabs == 0 else "\u2514-"
-        pre = whitespace + corner
-
-        print(f"{pre}{item} - {rate} per min.")
+        whitespace = " " * (tabs) * tabSize
+        whitespace += "\u25D9" if tabs == 0 else "\u21B3"
+        print(f" {whitespace} {item} - {rate}")
         for child in children:
             prettyPrintTreeHelper(child, tabs + 1)
 
-    item = factory["tree"][0]
+    items_list = ' & '.join([x[0] for x in factory["trees"]])
     
-    print("")
-    print("######")
-    print("")
-    print(f"FACTORY: {item}")
-    print("")
-    print("######")
-    prettyPrintTreeHelper(factory["tree"])
-    print("######")
-    print("INGREDIENT TOTALS:")
+    print("######\n")
+    print("=== FACTORY ===")
+    for tree in factory["trees"]:
+        prettyPrintTreeHelper(tree)
+    print("\n=== INGREDIENT TOTALS ===")
     for item in factory['ingredient_totals']:
         rate = factory['ingredient_totals'][item]
         print(f"- {item} - {rate}")
-    print("######")
-    print("RAW MATERIALS:")
+    print("\n=== RAW MATERIALS ===")
     for item in [x for x in factory['ingredient_totals'] if x in RAW_MATERIALS]:
         rate = factory['ingredient_totals'][item]
         print(f"- {item} - {rate}")
-    print("######")
-    print("BYPRODUCTS:")
+    print("\n=== BYPRODUCTS ===")
     for item in factory['byproducts']:
         rate = factory['byproducts'][item]
         print(f"- {item} - {rate}")
-    print("")
-    print("######")
+    print("\n######")

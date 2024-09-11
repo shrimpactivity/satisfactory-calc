@@ -4,9 +4,9 @@ import recipe
 # Use specified alternate recipes
 USE_RECIPES = []
 # Item to produce
-ITEMS = ["smart_plating"]
+ITEMS = ["smart_plating", "iron_plate"]
 # Rate to produce item (per minute)
-RATES = [120]
+RATES = [60, 120]
 
 def main():
     recipes = recipe.getRecipes(USE_RECIPES)
