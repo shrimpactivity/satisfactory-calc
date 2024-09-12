@@ -87,7 +87,7 @@ def scaleFactoryToIngredient(ingredient, amount, factory):
 
 RAW_MATERIALS = ["iron_ore", "copper_ore", "limestone", "coal", "sulfur", "quartz"]
 
-def prettyPrintFactory(factory, tabSize=4):
+def prettyPrintFactory(factory, tabSize=3):
 
     def prettyPrintTreeHelper(tree, tabs=0):
         if (len(tree) == 0):

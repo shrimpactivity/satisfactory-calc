@@ -158,5 +158,85 @@
         "products": [
             {"item": "modular_frame", "amount": 2}
         ]
+    },
+    {
+        "recipe_name": "concrete",
+        "primary": true,
+        "duration": 4,
+        "ingredients": [
+            {"item": "limestone", "amount": 3}
+        ],
+        "products":[
+            {"item": "concrete", "amount": 1}
+        ]
+
+    },
+    { 
+        "recipe_name": "copper_sheet",
+        "primary": true,
+        "duration": 6,
+        "ingredients": [
+            {"item": "copper_ingot", "amount": 2}
+        ],
+        "products":[
+            {"item": "copper_sheet", "amount": 1}
+        ]
+    },
+    { 
+        "recipe_name": "copper_ingot",
+        "primary": true,
+        "duration": 2,
+        "ingredients": [
+            {"item": "copper_ore", "amount": 1}
+        ],
+        "products":[
+            {"item": "copper_ingot", "amount": 1}
+        ]
+    },
+    { 
+        "recipe_name": "steel_ingot",
+        "primary": true,
+        "duration": 4,
+        "ingredients": [
+            {"item": "iron_ore", "amount": 3},
+            {"item": "coal", "amount": 3}
+        ],
+        "products":[
+            {"item": "steel_ingot", "amount": 1}
+        ]
+    },
+    { 
+        "recipe_name": "steel_beam",
+        "primary": true,
+        "duration": 4,
+        "ingredients": [
+            {"item": "steel_ingot", "amount": 4}
+        ],
+        "products":[
+            {"item": "steel_beam", "amount": 1}
+        ]
+    },
+    { 
+        "recipe_name": "steel_pipe",
+        "primary": true,
+        "duration": 6,
+        "ingredients": [
+            {"item": "steel_ingot", "amount": 3}
+        ],
+        "products":[
+            {"item": "steel_pipe", "amount": 2}
+        ]
+    },
+    { 
+        "recipe_name": "versatile_framework",
+        "primary": true,
+        "duration": 24,
+        "ingredients": [
+            {"item": "steel_beam", "amount": 12},
+            {"item": "modular_frame", "amount": 1}
+        ],
+        "products":[
+            {"item": "versatile_framework", "amount": 2}
+        ]
     }
 ]

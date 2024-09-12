@@ -4,9 +4,9 @@ import recipe
 # Use specified alternate recipes
 USE_RECIPES = []
 # Item to produce
-ITEMS = ["modular_frame"]
+ITEMS = ["versatile_framework"]
 # Rate to produce item (per minute)
-RATES = [5]
+RATES = [1]
 
 def main():
     recipes = recipe.getRecipes(USE_RECIPES)
@@ -17,4 +17,4 @@ def main():
 if __name__ == "__main__":
     main()
 
-# TODO: list number of machines with ingredient list
+# TODO: make factory builder accept dict of items to rates.
