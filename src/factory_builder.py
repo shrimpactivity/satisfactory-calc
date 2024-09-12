@@ -85,13 +85,13 @@ def scaleFactory(factory, scale):
     trees = [scaleFactoryTree(t, scale) for t in factory['trees']]
     ingredient_totals = factory["ingredient_totals"]
     for ing in ingredient_totals:
-        ingredient_totals[ing] = ingredient_totals[ing] * scale, 2
+        ingredient_totals[ing] = ingredient_totals[ing] * scale
     byproduct_totals = factory["byproducts"]
     for b in byproduct_totals:
-        byproduct_totals[b] = byproduct_totals[b] * scale, 2
+        byproduct_totals[b] = byproduct_totals[b] * scale
     machine_totals = factory["machine_totals"]
     for m in machine_totals:
-        machine_totals[m] = machine_totals[m] * scale, 2
+        machine_totals[m] = machine_totals[m] * scale
     factory["trees"] = trees
     factory["ingredient_totals"] = ingredient_totals
     factory["byproducts"] = byproduct_totals
@@ -106,7 +106,7 @@ def prettyPrintFactoryTree(tree, tabs=0, tabSize=3):
             return
         
         item = tree[0]
-        rate = round(tree[1], 1)
+        rate = round(tree[1], 2)
         machines = math.floor(tree[2] + 1)
         children = tree[3]
 
@@ -124,16 +124,16 @@ def prettyPrintFactory(factory):
         prettyPrintFactoryTree(tree)
     print("\n=== INGREDIENT TOTALS ===")
     for item in factory['ingredient_totals']:
-        rate = factory['ingredient_totals'][item]
+        rate = round(factory['ingredient_totals'][item], 2)
         machines = 0 if item not in factory['machine_totals'] else math.floor(factory['machine_totals'][item] + 1)
         machines_text = "" if machines == 0 else f"({machines} machines)"
         print(f"\u2022 {item} - {rate} {machines_text}")
     print("\n=== RAW MATERIALS ===")
     for item in [x for x in factory['ingredient_totals'] if x in config.RAW_MATERIALS]:
-        rate = round(factory['ingredient_totals'][item], 1)
+        rate = round(factory['ingredient_totals'][item], 2)
         print(f"\u2022 {item} - {rate}")
     print("\n=== BYPRODUCTS ===")
     for item in factory['byproducts']:
-        rate = round(factory['byproducts'][item], 1)
+        rate = round(factory['byproducts'][item], 2)
         print(f"\u2022 {item} - {rate}")
     print("\n######")
