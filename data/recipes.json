@@ -146,5 +146,17 @@
             }
         ],
         "duration": 15
+    },
+    {
+        "recipe_name": "modular_frame",
+        "primary": true,
+        "duration": 30,
+        "ingredients": [
+            {"item": "reinforced_iron_plate", "amount": 3},
+            {"item": "iron_rod", "amount": 12}
+        ],
+        "products": [
+            {"item": "modular_frame", "amount": 2}
+        ]
     }
 ]
