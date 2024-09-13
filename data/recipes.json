@@ -1,242 +1,229 @@
 [
-    {
-        "recipe_name": "iron_ingot",
-        "primary": true,
-        "ingredients": [
-            {
-                "item": "iron_ore",
-                "amount": 1
-            }
-        ],
-        "products": [
-            {
-                "item": "iron_ingot",
-                "amount": 1
-            }
-        ],
-        "duration": 2
-    },
-    {
-        "recipe_name": "smart_plating",
-        "primary": true,
-        "ingredients": [
-            {
-                "item": "reinforced_iron_plate",
-                "amount": 1
-            },
-            {
-                "item": "rotor",
-                "amount": 1
-            }
-        ],
-        "products": [
-            {
-                "item": "smart_plating",
-                "amount": 1
-            }
-        ],
-        "duration": 30
-    },
-    {
-        "recipe_name": "reinforced_iron_plate",
-        "primary": true,
-        "ingredients": [
-            {
-                "item": "iron_plate",
-                "amount": 6
-            },
-            {
-                "item": "screw",
-                "amount": 12
-            }
-        ],
-        "products": [
-            {
-                "item": "reinforced_iron_plate",
-                "amount": 1
-            }
-        ],
-        "duration": 12
-    },
-    {
-        "recipe_name": "iron_plate",
-        "primary": true,
-        "ingredients": [
-            {
-                "item": "iron_ingot",
-                "amount": 3
-            }
-        ],
-        "products": [
-            {
-                "item": "iron_plate",
-                "amount": 1
-            }
-        ],
-        "duration": 12
-    },
-    {
-        "recipe_name": "screw",
-        "primary": true,
-        "ingredients": [
-            {
-                "item": "iron_rod",
-                "amount": 1
-            }
-        ],
-        "products": [
-            {
-                "item": "screw",
-                "amount": 4
-            }
-        ],
-        "duration": 6
-    },
-    {
-        "recipe_name": "iron_rod",
-        "primary": true,
-        "ingredients": [
-            {
-                "item": "iron_ingot",
-                "amount": 1
-            }
-        ],
-        "products": [
-            {
-                "item": "iron_rod",
-                "amount": 1
-            }
-        ],
-        "duration": 4
-    },
-    {
-        "recipe_name": "iron_rod",
-        "primary": true,
-        "ingredients": [
-            {
-                "item": "iron_ingot",
-                "amount": 1
-            }
-        ],
-        "products": [
-            {
-                "item": "iron_rod",
-                "amount": 1
-            }
-        ],
-        "duration": 4
-    },
-    {
-        "recipe_name": "rotor",
-        "primary": true,
-        "ingredients": [
-            {
-                "item": "iron_rod",
-                "amount": 5
-            },
-            {
-                "item": "screw",
-                "amount": 25
-            }
-        ],
-        "products": [
-            {
-                "item": "rotor",
-                "amount": 1
-            }
-        ],
-        "duration": 15
-    },
-    {
-        "recipe_name": "modular_frame",
-        "primary": true,
-        "duration": 30,
-        "ingredients": [
-            {"item": "reinforced_iron_plate", "amount": 3},
-            {"item": "iron_rod", "amount": 12}
-        ],
-        "products": [
-            {"item": "modular_frame", "amount": 2}
-        ]
-    },
-    {
-        "recipe_name": "concrete",
-        "primary": true,
-        "duration": 4,
-        "ingredients": [
-            {"item": "limestone", "amount": 3}
-        ],
-        "products":[
-            {"item": "concrete", "amount": 1}
-        ]
-
-    },
-    { 
-        "recipe_name": "copper_sheet",
-        "primary": true,
-        "duration": 6,
-        "ingredients": [
-            {"item": "copper_ingot", "amount": 2}
-        ],
-        "products":[
-            {"item": "copper_sheet", "amount": 1}
-        ]
-    },
-    { 
-        "recipe_name": "copper_ingot",
-        "primary": true,
-        "duration": 2,
-        "ingredients": [
-            {"item": "copper_ore", "amount": 1}
-        ],
-        "products":[
-            {"item": "copper_ingot", "amount": 1}
-        ]
-    },
-    { 
-        "recipe_name": "steel_ingot",
-        "primary": true,
-        "duration": 4,
-        "ingredients": [
-            {"item": "iron_ore", "amount": 3},
-            {"item": "coal", "amount": 3}
-        ],
-        "products":[
-            {"item": "steel_ingot", "amount": 1}
-        ]
-    },
-    { 
-        "recipe_name": "steel_beam",
-        "primary": true,
-        "duration": 4,
-        "ingredients": [
-            {"item": "steel_ingot", "amount": 4}
-        ],
-        "products":[
-            {"item": "steel_beam", "amount": 1}
-        ]
-    },
-    { 
-        "recipe_name": "steel_pipe",
-        "primary": true,
-        "duration": 6,
-        "ingredients": [
-            {"item": "steel_ingot", "amount": 3}
-        ],
-        "products":[
-            {"item": "steel_pipe", "amount": 2}
-        ]
-    },
-    { 
-        "recipe_name": "versatile_framework",
-        "primary": true,
-        "duration": 24,
-        "ingredients": [
-            {"item": "steel_beam", "amount": 12},
-            {"item": "modular_frame", "amount": 1}
-        ],
-        "products":[
-            {"item": "versatile_framework", "amount": 2}
-        ]
-    }
+  {
+    "recipe_name": "iron_ingot",
+    "primary": true,
+    "ingredients": [
+      {
+        "item": "iron_ore",
+        "amount": 1
+      }
+    ],
+    "products": [
+      {
+        "item": "iron_ingot",
+        "amount": 1
+      }
+    ],
+    "duration": 2
+  },
+  {
+    "recipe_name": "smart_plating",
+    "primary": true,
+    "ingredients": [
+      {
+        "item": "reinforced_iron_plate",
+        "amount": 1
+      },
+      {
+        "item": "rotor",
+        "amount": 1
+      }
+    ],
+    "products": [
+      {
+        "item": "smart_plating",
+        "amount": 1
+      }
+    ],
+    "duration": 30
+  },
+  {
+    "recipe_name": "reinforced_iron_plate",
+    "primary": true,
+    "ingredients": [
+      {
+        "item": "iron_plate",
+        "amount": 6
+      },
+      {
+        "item": "screw",
+        "amount": 12
+      }
+    ],
+    "products": [
+      {
+        "item": "reinforced_iron_plate",
+        "amount": 1
+      }
+    ],
+    "duration": 12
+  },
+  {
+    "recipe_name": "iron_plate",
+    "primary": true,
+    "ingredients": [
+      {
+        "item": "iron_ingot",
+        "amount": 3
+      }
+    ],
+    "products": [
+      {
+        "item": "iron_plate",
+        "amount": 2
+      }
+    ],
+    "duration": 6
+  },
+  {
+    "recipe_name": "screw",
+    "primary": true,
+    "ingredients": [
+      {
+        "item": "iron_rod",
+        "amount": 1
+      }
+    ],
+    "products": [
+      {
+        "item": "screw",
+        "amount": 4
+      }
+    ],
+    "duration": 6
+  },
+  {
+    "recipe_name": "iron_rod",
+    "primary": true,
+    "ingredients": [
+      {
+        "item": "iron_ingot",
+        "amount": 1
+      }
+    ],
+    "products": [
+      {
+        "item": "iron_rod",
+        "amount": 1
+      }
+    ],
+    "duration": 4
+  },
+  {
+    "recipe_name": "iron_rod",
+    "primary": true,
+    "ingredients": [
+      {
+        "item": "iron_ingot",
+        "amount": 1
+      }
+    ],
+    "products": [
+      {
+        "item": "iron_rod",
+        "amount": 1
+      }
+    ],
+    "duration": 4
+  },
+  {
+    "recipe_name": "rotor",
+    "primary": true,
+    "ingredients": [
+      {
+        "item": "iron_rod",
+        "amount": 5
+      },
+      {
+        "item": "screw",
+        "amount": 25
+      }
+    ],
+    "products": [
+      {
+        "item": "rotor",
+        "amount": 1
+      }
+    ],
+    "duration": 15
+  },
+  {
+    "recipe_name": "modular_frame",
+    "primary": true,
+    "duration": 30,
+    "ingredients": [
+      { "item": "reinforced_iron_plate", "amount": 3 },
+      { "item": "iron_rod", "amount": 12 }
+    ],
+    "products": [{ "item": "modular_frame", "amount": 2 }]
+  },
+  {
+    "recipe_name": "concrete",
+    "primary": true,
+    "duration": 4,
+    "ingredients": [{ "item": "limestone", "amount": 3 }],
+    "products": [{ "item": "concrete", "amount": 1 }]
+  },
+  {
+    "recipe_name": "copper_sheet",
+    "primary": true,
+    "duration": 6,
+    "ingredients": [{ "item": "copper_ingot", "amount": 2 }],
+    "products": [{ "item": "copper_sheet", "amount": 1 }]
+  },
+  {
+    "recipe_name": "copper_ingot",
+    "primary": true,
+    "duration": 2,
+    "ingredients": [{ "item": "copper_ore", "amount": 1 }],
+    "products": [{ "item": "copper_ingot", "amount": 1 }]
+  },
+  {
+    "recipe_name": "steel_ingot",
+    "primary": true,
+    "duration": 4,
+    "ingredients": [
+      { "item": "iron_ore", "amount": 3 },
+      { "item": "coal", "amount": 3 }
+    ],
+    "products": [{ "item": "steel_ingot", "amount": 3 }]
+  },
+  {
+    "recipe_name": "steel_beam",
+    "primary": true,
+    "duration": 4,
+    "ingredients": [{ "item": "steel_ingot", "amount": 4 }],
+    "products": [{ "item": "steel_beam", "amount": 1 }]
+  },
+  {
+    "recipe_name": "steel_pipe",
+    "primary": true,
+    "duration": 6,
+    "ingredients": [{ "item": "steel_ingot", "amount": 3 }],
+    "products": [{ "item": "steel_pipe", "amount": 2 }]
+  },
+  {
+    "recipe_name": "versatile_framework",
+    "primary": true,
+    "duration": 24,
+    "ingredients": [
+      { "item": "steel_beam", "amount": 12 },
+      { "item": "modular_frame", "amount": 1 }
+    ],
+    "products": [{ "item": "versatile_framework", "amount": 2 }]
+  },
+  {
+    "recipe_name": "cable",
+    "primary": true,
+    "duration": 6,
+    "ingredients": [{ "item": "copper_wire", "amount": 2 }],
+    "products": [{ "item": "cable", "amount": 1 }]
+  },
+  {
+    "recipe_name": "wire",
+    "primary": true,
+    "duration": 4,
+    "ingredients": [{ "item": "copper_ingot", "amount": 1 }],
+    "products": [{ "item": "wire", "amount": 2 }]
+  }
 ]

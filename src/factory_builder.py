@@ -5,11 +5,13 @@ import config
 def getRate(amount, duration):
     return 60 / duration * amount
 
+
 def addToRunningTotal(dict, key, amount):
     if key in dict:
         dict[key] += amount
     else:
         dict[key] = amount
+
 
 # Generates a tree encoded as list [item, rate, [children]]
 def buildFactory(items_to_rates, item_recipes):
@@ -22,28 +24,21 @@ def buildFactory(items_to_rates, item_recipes):
         if item not in item_recipes:
             return [item, rate, 0, []]
         # Base case in the event of looping recipe?
-        if rate < 0.01:
-            return [item, 0, []]
+        if rate < 0.001:
+            return [item, rate, 0, []]
 
         recipe = item_recipes[item]
         recipe_product = [p for p in recipe["products"] if p["item"] == item][0]
         machines = rate / getRate(recipe_product["amount"], recipe["duration"])
-
-        # Add machine running totals
-        if item in machine_totals:
-            machine_totals[item] += machines
-        else:
-            machine_totals[item] = machines
+        
+        addToRunningTotal(machine_totals, item, machines)
 
         # Add byproduct running totals
         byproducts = [p for p in recipe["products"] if p["item"] != item]
         for product in byproducts:
             byproduct_item = product["item"]
             byproduct_rate = getRate(product["amount"], recipe["duration"]) * machines
-            if byproduct_item in byproduct_totals:
-                byproduct_totals[byproduct_item] += byproduct_rate
-            else:
-                byproduct_totals[byproduct_item] = byproduct_rate
+            addToRunningTotal(byproduct_totals, byproduct_item, byproduct_rate)
 
         # Recursive call on ingredient children
         children = []
@@ -51,11 +46,7 @@ def buildFactory(items_to_rates, item_recipes):
             ingredient_item = ingredient["item"]
             consumption_rate = getRate(ingredient["amount"], recipe["duration"]) * machines
             
-            # Add ingredient running totals
-            if ingredient_item in ingredient_totals:
-                ingredient_totals[ingredient_item] += consumption_rate
-            else:
-                ingredient_totals[ingredient_item] = consumption_rate
+            addToRunningTotal(ingredient_totals, ingredient_item, consumption_rate)
             
             children.append(buildFactoryHelper(ingredient_item, consumption_rate))
         
@@ -101,7 +92,9 @@ def scaleFactoryToIngredient(ingredient, amount, factory):
     scale = amount / factory["ingredient_totals"][ingredient]
     scaleFactory(factory, scale)
 
+
 def prettyPrintFactoryTree(tree, tabs=0, tabSize=3):
+        # Base case
         if (len(tree) == 0):
             return
         
@@ -112,10 +105,11 @@ def prettyPrintFactoryTree(tree, tabs=0, tabSize=3):
 
         whitespace = " " * (tabs) * tabSize
         whitespace += "\u25D9" if tabs == 0 else "\u21B3"
-        machines_text = "" if machines == 0 else f"({machines} machines)"
+        machines_text = "" if machines <= 1 else f"({machines} machines)"
         print(f" {whitespace} {item} - {rate} {machines_text}")
         for child in children:
             prettyPrintFactoryTree(child, tabs + 1)
+
 
 def prettyPrintFactory(factory):
     print("######\n")
@@ -126,7 +120,7 @@ def prettyPrintFactory(factory):
     for item in factory['ingredient_totals']:
         rate = round(factory['ingredient_totals'][item], 2)
         machines = 0 if item not in factory['machine_totals'] else math.floor(factory['machine_totals'][item] + 1)
-        machines_text = "" if machines == 0 else f"({machines} machines)"
+        machines_text = "" if machines <= 0 else f"({machines} machines)"
         print(f"\u2022 {item} - {rate} {machines_text}")
     print("\n=== RAW MATERIALS ===")
     for item in [x for x in factory['ingredient_totals'] if x in config.RAW_MATERIALS]:

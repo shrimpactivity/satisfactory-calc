@@ -2,7 +2,6 @@ import factory_builder
 import recipe
 import config
 
-
 def main():
     recipes = recipe.getRecipes(config.USE_RECIPES)
     factory = factory_builder.buildFactory(config.ITEMS_AND_RATES, recipes)
@@ -16,5 +15,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-# TODO: make factory builder accept dict of items to rates.
