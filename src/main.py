@@ -1,4 +1,5 @@
 import factory_builder
+import pretty_printer
 import recipe
 import config
 
@@ -11,7 +12,7 @@ def main():
         if (item_consumption_rate > config.INGREDIENT_LIMITS[item]):
             print(f'Scaling factory to fit {item} production...')
             factory_builder.scaleFactoryToIngredient(item, config.INGREDIENT_LIMITS[item], factory)
-    factory_builder.prettyPrintFactory(factory)
+    pretty_printer.prettyPrintFactory(factory)
 
 if __name__ == "__main__":
     main()

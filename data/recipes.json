@@ -225,5 +225,58 @@
     "duration": 4,
     "ingredients": [{ "item": "copper_ingot", "amount": 1 }],
     "products": [{ "item": "wire", "amount": 2 }]
+  },
+  {
+    "recipe_name": "quartz_crystal",
+    "primary": true,
+    "duration": 8,
+    "ingredients": [{ "item": "raw_quartz", "amount": 5}],
+    "products": [{"item": "quartz_crystal", "amount": 3}]
+  },
+  {
+    "recipe_name": "silica",
+    "primary": true,
+    "duration": 8,
+    "ingredients": [{ "item": "silica", "amount": 5}],
+    "products": [{"item": "raw_quartz", "amount": 3}]
+  },
+  {
+    "recipe_name": "crystal_oscillator",
+    "primary": true,
+    "duration": 120,
+    "ingredients": [
+      { "item": "quartz_crystal", "amount": 36},
+      { "item": "cable", "amount": 28},
+      { "item": "reinforced_iron_plate", "amount": 5}
+    ],
+    "products": [{"item": "crystal_oscillator", "amount": 2}]
+  },
+  {
+    "recipe_name": "motor",
+    "primary": true,
+    "duration": 12,
+    "ingredients": [{ "item": "rotor", "amount": 2}, { "item": "stator", "amount": 2}],
+    "products": [{"item": "motor", "amount": 1}]
+  },
+  {
+    "recipe_name": "encased_industrial_beam",
+    "primary": true,
+    "duration": 10,
+    "ingredients": [{ "item": "concrete", "amount": 6}, { "item": "steel_beam", "amount": 3}],
+    "products": [{"item": "encased_industrial_beam", "amount": 1}]
+  },
+  {
+    "recipe_name": "stator",
+    "primary": true,
+    "duration": 12,
+    "ingredients": [{ "item": "steel_pipe", "amount": 3}, { "item": "wire", "amount": 8}],
+    "products": [{"item": "stator", "amount": 1}]
+  },
+  {
+    "recipe_name": "automated_wiring",
+    "primary": true,
+    "duration": 24,
+    "ingredients": [{ "item": "stator", "amount": 1}, { "item": "cable", "amount": 20}],
+    "products": [{"item": "automated_wiring", "amount": 1}]
   }
 ]
