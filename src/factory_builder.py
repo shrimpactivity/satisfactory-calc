@@ -1,7 +1,7 @@
 
 # Get production/consumption rate (per minute) based on recipe duration and item amount
 def getRate(amount, duration):
-    return 60 / duration * amount
+    return 60.0 / duration * amount
 
 
 def addToRunningTotal(dict, key, amount):
@@ -13,11 +13,13 @@ def addToRunningTotal(dict, key, amount):
 
 # Generates a tree encoded as list [item, rate, [children]]
 def buildFactory(items_to_rates, item_recipes):
-    ingredient_totals = {}
+    item_totals = {}
     machine_totals = {}
     byproduct_totals = {}
 
     def buildFactoryHelper(item, rate):
+        addToRunningTotal(item_totals, item, rate)
+        
         # Base case
         if item not in item_recipes:
             return [item, rate, 0, []]
@@ -44,17 +46,17 @@ def buildFactory(items_to_rates, item_recipes):
             ingredient_item = ingredient["item"]
             consumption_rate = getRate(ingredient["amount"], recipe["duration"]) * machines
             
-            addToRunningTotal(ingredient_totals, ingredient_item, consumption_rate)
-            
             children.append(buildFactoryHelper(ingredient_item, consumption_rate))
         
         return [item, rate, machines, children]
     
     trees = [buildFactoryHelper(item, items_to_rates[item]) for item in items_to_rates]
+    
+    print(machine_totals["encased_industrial_beam"])
 
     return {
         "trees": trees,
-        "ingredient_totals": ingredient_totals,
+        "item_totals": item_totals,
         "machine_totals": machine_totals,
         "byproducts": byproduct_totals,
     }

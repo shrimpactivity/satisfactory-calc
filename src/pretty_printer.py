@@ -7,8 +7,8 @@ def prettyPrintFactoryTree(tree, tabs=0, tabSize=3):
             return
         
         item = tree[0]
-        rate = round(tree[1], 2)
-        machines = math.floor(tree[2] + 1)
+        rate = round(tree[1], 1)
+        machines = round(tree[2], 1)
         children = tree[3]
 
         whitespace = " " * (tabs) * tabSize
@@ -24,18 +24,18 @@ def prettyPrintFactory(factory):
     print("=== FACTORY ===")
     for tree in factory["trees"]:
         prettyPrintFactoryTree(tree)
-    print("\n=== INGREDIENT TOTALS ===")
-    for item in sorted([item for item in factory['ingredient_totals']]):
-        rate = round(factory['ingredient_totals'][item], 2)
-        machines = 0 if item not in factory['machine_totals'] else math.floor(factory['machine_totals'][item] + 1)
-        machines_text = "" if machines <= 0 else f"({machines} machines)"
+    print("\n=== ITEM TOTALS ===")
+    for item in sorted([item for item in factory['item_totals']]):
+        rate = round(factory['item_totals'][item], 1)
+        machines = 0 if item not in factory['machine_totals'] else round(factory['machine_totals'][item], 1)
+        machines_text = "" if machines == 0 else f"({machines} machines)"
         print(f"\u2022 {item} - {rate} {machines_text}")
     print("\n=== RAW MATERIALS ===")
-    for item in sorted([x for x in factory['ingredient_totals'] if x in config.RAW_MATERIALS]):
-        rate = round(factory['ingredient_totals'][item], 2)
+    for item in sorted([x for x in factory['item_totals'] if x in config.RAW_MATERIALS]):
+        rate = round(factory['item_totals'][item], 1)
         print(f"\u2022 {item} - {rate}")
     print("\n=== BYPRODUCTS ===")
     for item in sorted([item for item in factory['byproducts']]):
-        rate = round(factory['byproducts'][item], 2)
+        rate = round(factory['byproducts'][item], 1)
         print(f"\u2022 {item} - {rate}")
     print("\n######")

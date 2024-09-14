@@ -266,6 +266,13 @@
     "products": [{"item": "encased_industrial_beam", "amount": 1}]
   },
   {
+    "recipe_name": "encased_industrial_pipe",
+    "primary": true,
+    "duration": 15,
+    "ingredients": [{ "item": "concrete", "amount": 5}, { "item": "steel_pipe", "amount": 6}],
+    "products": [{"item": "encased_industrial_beam", "amount": 1}]
+  },
+  {
     "recipe_name": "stator",
     "primary": true,
     "duration": 12,
