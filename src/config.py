@@ -13,19 +13,29 @@ phase_2 = {
         "reinforced_iron_plate": 400 / 30,
         "copper_sheet": 500 / 30,
         "wire": 2000 / 30,
-    }, 
+    },
     "recipes": [
         "encased_industrial_pipe"
     ]
 }
 
-# Use specified alternate recipes
-USE_RECIPES = phase_2["recipes"]
-# Item to produce and their rate (per min.)
-ITEMS_AND_RATES = phase_2["factory"]
-# Scale factory based on ingredient availability
-INGREDIENT_LIMITS = {
+early_quartz = {
+    "factory": {
+        "quartz_crystal": 1,
+        "silica": 1
+    },
+    "recipes": []
 
 }
 
-RAW_MATERIALS = ["iron_ore", "copper_ore", "limestone", "coal", "sulfur", "raw_quartz"]
+# Use specified alternate recipes
+USE_RECIPES = early_quartz["recipes"]
+# Item to produce and their rate (per min.)
+ITEMS_AND_RATES = early_quartz["factory"]
+# Scale factory based on ingredient availability
+INGREDIENT_SUPPLY = {
+    "raw_quartz": 240
+}
+
+RAW_MATERIALS = ["iron_ore", "copper_ore",
+                 "limestone", "coal", "sulfur", "raw_quartz"]

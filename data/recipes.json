@@ -230,15 +230,15 @@
     "recipe_name": "quartz_crystal",
     "primary": true,
     "duration": 8,
-    "ingredients": [{ "item": "raw_quartz", "amount": 5}],
-    "products": [{"item": "quartz_crystal", "amount": 3}]
+    "ingredients": [{ "item": "raw_quartz", "amount": 3}],
+    "products": [{"item": "quartz_crystal", "amount": 5}]
   },
   {
     "recipe_name": "silica",
     "primary": true,
     "duration": 8,
-    "ingredients": [{ "item": "silica", "amount": 5}],
-    "products": [{"item": "raw_quartz", "amount": 3}]
+    "ingredients": [{ "item": "raw_quartz", "amount": 5}],
+    "products": [{"item": "silica", "amount": 3}]
   },
   {
     "recipe_name": "crystal_oscillator",
@@ -285,5 +285,33 @@
     "duration": 24,
     "ingredients": [{ "item": "stator", "amount": 1}, { "item": "cable", "amount": 20}],
     "products": [{"item": "automated_wiring", "amount": 1}]
+  },
+  {
+    "recipe_name": "caterium_ingot",
+    "primary": true,
+    "duration": 4,
+    "ingredients": [{ "item": "caterium_ore", "amount": 3 }],
+    "products": [{ "item": "caterium_ingot", "amount": 1 }]
+  },
+  {
+    "recipe_name": "quickwire",
+    "primary": true,
+    "duration": 5,
+    "ingredients": [{ "item": "caterium_ingot", "amount": 1 }],
+    "products": [{ "item": "quickwire", "amount": 5 }]
+  },
+  {
+    "recipe_name": "compacted_coal",
+    "primary": true,
+    "duration": 12,
+    "ingredients": [{ "item": "coal", "amount": 5 }, { "item": "sulfur", "amount": 5 }],
+    "products": [{ "item": "compacted_coal", "amount": 5 }]
+  },
+  {
+    "recipe_name": "black_powder",
+    "primary": true,
+    "duration": 4,
+    "ingredients": [{ "item": "coal", "amount": 1 }, { "item": "sulfur", "amount": 1 }],
+    "products": [{ "item": "compacted_coal", "amount": 2 }]
   }
 ]

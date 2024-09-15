@@ -52,8 +52,6 @@ def buildFactory(items_to_rates, item_recipes):
     
     trees = [buildFactoryHelper(item, items_to_rates[item]) for item in items_to_rates]
     
-    print(machine_totals["encased_industrial_beam"])
-
     return {
         "trees": trees,
         "item_totals": item_totals,
@@ -74,7 +72,7 @@ def scaleFactoryTree(tree, scale):
 
 def scaleFactory(factory, scale):
     trees = [scaleFactoryTree(t, scale) for t in factory['trees']]
-    ingredient_totals = factory["ingredient_totals"]
+    ingredient_totals = factory["item_totals"]
     for ing in ingredient_totals:
         ingredient_totals[ing] = ingredient_totals[ing] * scale
     byproduct_totals = factory["byproducts"]
@@ -84,10 +82,10 @@ def scaleFactory(factory, scale):
     for m in machine_totals:
         machine_totals[m] = machine_totals[m] * scale
     factory["trees"] = trees
-    factory["ingredient_totals"] = ingredient_totals
+    factory["item_totals"] = ingredient_totals
     factory["byproducts"] = byproduct_totals
 
 
 def scaleFactoryToIngredient(ingredient, amount, factory):
-    scale = amount / factory["ingredient_totals"][ingredient]
+    scale = amount / factory["item_totals"][ingredient]
     scaleFactory(factory, scale)
