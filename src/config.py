@@ -26,21 +26,13 @@ phase_2 = {
     "ingredient_supply": {}
 }
 
-early_quartz = {
-    "factory": {
-        "quartz_crystal": 1,
-        "silica": 1
-    },
-    "recipes": [],
-    "ingredient_supply": {"raw_quartz": 240}
-}
-
-# Use specified alternate recipes
-USE_RECIPES = early_quartz["recipes"]
 # Item to produce and their rate (per min.)
-ITEMS_AND_RATES = early_quartz["factory"]
+ITEMS_AND_RATES = {
+    "heavy_modular_frame": 2,
+}
+# Use specified alternate recipes
+USE_RECIPES = ["encased_industrial_pipe"]
 # Scale factory based on ingredient availability
-INGREDIENT_SUPPLY = early_quartz["ingredient_supply"]
+INGREDIENT_SUPPLY = {}
 
-RAW_MATERIALS = ["iron_ore", "copper_ore",
-                 "limestone", "coal", "sulfur", "raw_quartz", "sam"]
+RAW_MATERIALS = ["iron_ore", "copper_ore", "limestone", "coal", "sulfur", "raw_quartz", "sam", "crude_oil"]

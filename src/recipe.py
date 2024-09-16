@@ -1,7 +1,6 @@
 import json
 import jsonschema
 import recipe_schema
-import sys
 
 # Retrieves, validates, and parses json recipe data.
 def getRecipesData():

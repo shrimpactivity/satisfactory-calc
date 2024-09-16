@@ -334,5 +334,16 @@
     "duration": 6,
     "ingredients": [{ "item": "reanimated_sam", "amount": 6 }, { "item": "wire", "amount": 5 }, { "item": "steel_pipe", "amount": 3 }],
     "products": [{ "item": "sam_fluctuator", "amount": 1 }]
+  },
+  {  "recipe_name": "heavy_modular_frame",
+    "primary": true,
+    "duration": 30,
+    "ingredients": [
+      {"item": "modular_frame", "amount": 5},
+      {"item": "steel_pipe", "amount": 20},
+      {"item": "encased_industrial_beam", "amount": 5},
+      {"item": "screw", "amount": 120}
+    ],
+    "products": [{"item": "heavy_modular_frame", "amount": 1}]
   }
 ]
