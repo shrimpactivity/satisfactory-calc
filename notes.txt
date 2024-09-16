@@ -1,6 +1,0 @@
-
-
-"steel_pipe": 200 / 30,
-"modular_frame": 100 / 30,
-"rotor": 200 / 30,
-"reinforced_iron_plate": 400 / 30,
