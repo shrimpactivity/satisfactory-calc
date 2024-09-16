@@ -237,8 +237,8 @@
     "recipe_name": "silica",
     "primary": true,
     "duration": 8,
-    "ingredients": [{ "item": "raw_quartz", "amount": 5}],
-    "products": [{"item": "silica", "amount": 3}]
+    "ingredients": [{ "item": "raw_quartz", "amount": 3}],
+    "products": [{"item": "silica", "amount": 5}]
   },
   {
     "recipe_name": "crystal_oscillator",
@@ -313,5 +313,26 @@
     "duration": 4,
     "ingredients": [{ "item": "coal", "amount": 1 }, { "item": "sulfur", "amount": 1 }],
     "products": [{ "item": "compacted_coal", "amount": 2 }]
+  },
+  {
+    "recipe_name": "molded_beam",
+    "primary": true,
+    "duration": 12,
+    "ingredients": [{ "item": "steel_ingot", "amount": 24 }, { "item": "concrete", "amount": 16 }],
+    "products": [{ "item": "steel_beam", "amount": 9 }]
+  },
+  {
+    "recipe_name": "reanimated_sam",
+    "primary": true,
+    "duration": 2,
+    "ingredients": [{ "item": "sam", "amount": 4 }],
+    "products": [{ "item": "reanimated_sam", "amount": 1 }]
+  },
+  {
+    "recipe_name": "sam_fluctuator",
+    "primary": true,
+    "duration": 6,
+    "ingredients": [{ "item": "reanimated_sam", "amount": 6 }, { "item": "wire", "amount": 5 }, { "item": "steel_pipe", "amount": 3 }],
+    "products": [{ "item": "sam_fluctuator", "amount": 1 }]
   }
 ]
