@@ -10,6 +10,9 @@ def main():
     # Scale factory by ingredient supply
     i = 0        
     for item in config.INGREDIENT_SUPPLY:
+        if item not in factory["item_totals"]:
+            print(f"Cannot scale by {item}: not in factory")
+            continue
         item_consumption_rate = factory["item_totals"][item]
         # Always scale factory to first ingredient
         # Only scale factory by other items if it consumes more than supply
