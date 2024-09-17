@@ -325,5 +325,19 @@
       {"item": "screw", "amount": 120}
     ],
     "products": [{"item": "heavy_modular_frame", "amount": 1}]
+  },
+  {
+    "recipe_name": "plastic",
+    "duration": 6,
+    "primary": true,
+    "ingredients": [{"item": "crude_oil", "amount": 3}],
+    "products": [{"item": "plastic", "amount": 2}, {"item": "heavy_oil_residue", "amount": 1}]
+  },
+  {
+    "recipe_name": "rubber",
+    "duration": 6,
+    "primary": true,
+    "ingredients": [{"item": "crude_oil", "amount": 3}],
+    "products": [{"item": "rubber", "amount": 2}, {"item": "heavy_oil_residue", "amount": 2}]
   }
 ]
